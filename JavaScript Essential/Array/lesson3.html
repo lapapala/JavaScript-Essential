@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Array_simple
+        //Array
+        /*
+        var a = [1, 2, 3, 5, 7];
+
+        document.write(a + "<hr/>");
+
+        var b = ["September", "October", "November", "December"];
+
+        document.write(b + "<hr/>");
+        
+        var c = [, , , ,];
+        
+        document.write(c + "<hr/>");
+        
+        var d = ["dypa", true, 34];
+        
+        document.write(d + "<hr/>");
+        */
+        //Call_Array
+        /*
+        var a = Array(1,2,3,4,5);
+        var b = Array();
+        document.write(a + "<hr/>"); 
+        
+        var c = Array(10);
+        
+        document.write(c + "<hr/>");  
+        */
+        //Array_Contain
+        /*
+        var arr = Array(5);
+        
+        arr[0] = 15;
+        arr[1] = 10;
+        arr[2] = 134;
+        arr[3] = 65;
+        arr[4] = 12;
+        arr[5] = 3;
+        
+        document.write("Вмістиме масиву:" + arr[2] + "<br/><hr/>");
+    
+        arr[4] = "Some string";
+        arr[10]= "Another string";
+        
+        document.write(arr + "<hr/>");
+        */
+        //Array_Lenght
+        /*
+        var array = ['h', 'e', 'l', 'l', 'o'];
+        
+        document.write( "Довжіна масиву [" + array + "] = " + array.length);
+        */
+        //Array_lenght2
+        /*
+        var array = ['h', 'e', 'l', 'l', 'o'];
+        
+        array.length = 7;
+        
+        for (i = 0; i < array.length; i++) { 
+        document.write(array[i] + "<br/>")
+        }
+        
+        document.write("<hr/>");
+        
+        array.length = 2;
+        
+        for (i = 0; i < array.length; i++) { 
+        document.write(array[i] + "<br/>")
+        }
+        */
+        //Array_change 
+        /*
+        var arr = [111, 222, 333];
+
+        document.write("Довжина масиву =" + arr.length + "<br/>");
+
+        arr[10] = 50;
+
+        document.write("Довжина масиву =" + arr.length + "<br/><hr/>");
+
+        for (i = 0; i < arr.length; i++) {
+            
+            document.write(arr[i] + "<br/>" );
+        }
+        */
+        //Acociated_array
+        /*
+        var laptop = {cpu: "Core i7", ram: "16gb", screen: "17"};
+    
+        var key = prompt("Введіть параметр який вас інтересує ram, cpu, screen ");
+        
+        var value = laptop[key];
+        document.write(value + "<hr/>");
+        
+        document.write("<p>" + laptop.cpu);
+        document.write("<p>" + laptop["cpu"]);
+*/
+        //Array_Matrix
+        /*
+        var table = new Array(10);
+
+        for (var i = 0; i < table.length; i++) {
+            table[i] = new Array(10);
+        }
+
+        for (var row = 0; row < table.length; row++) {
+            for (var col = 0; col < table[row].length; col++) {
+                if ((row + col) % 2 == 1)
+                    table[row][col] = "<img src='image/parque1.jpg' width = '50' height = '50'/>";
+                else
+                    table[row][col] = "<img src='image/parque2.jpg' width = '50' height = '50'/>";
+            }
+        }
+        table[8][1] = "<img src='image/parque3.jpg' width = '50' height = '50'/>";
+
+        for (var row = 0; row < table.length; row++) {
+            for (var col = 0; col < table[row].length; col++) {
+                document.write(table[row][col]);
+            }
+            document.write("<br/>");
+        }
+
+        var square = table[8][1];
+        document.write("<p/>" + square);
+        */
+        //Array_method
+        //join
+        /* var arr = ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця" + "<hr/>"];
+         
+         document.write(arr); 
+         
+         var res = arr.join("=");
+         
+         document.write("<p>" + res);
+         
+         res = arr.join("<br/>");
+         document.write(res);
+         */
+        //Join_Example
+        /*
+        var arr = ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця"];
+         
+        document.write("<ul> <li>");
+        
+        var rez = arr.join("</li><li>");
+        document.write(rez);
+        
+        document.write("</li></ul>");
+        */
+        //Concat
+        /*
+        var a = [1, 2, 3];
+        
+        a = a.concat(4,5);
+        document.write(a);
+        
+        a = a.concat(6, 5, [8, 9]);
+        document.write("<p>" + a);
+        */
+        //Concat_Example
+        /*
+        var a = [1, 2, 3];
+        
+        var input = prompt("Введіть нове значення масиву");
+        
+        while (input != null) {
+            a = a.concat(input);
+            input = prompt("Введіть нове значення масиву");
+        }
+        
+        document.write(a.join("<br/>"));
+        */
+        //Reverse
+        /*
+        var a = new Array(1, 2, 3, 4, 5, 6);
+        
+        a.reverse();
+          
+        document.write(a.join("<br/>"));
+        */
+        //Slice
+        /*
+        var a = Array(1, 2, 3, 4, 5, 6);
+
+        var temp = a.slice(0, 3);
+        document.write("<p/>" + temp);
+
+        temp = a.slice(3);
+        document.write("<p/>" + temp);
+
+        temp = a.slice(2, -2);
+        document.write("<p/>" + temp);
+        */
+        //Slice_simple
+        /*
+        var arr = ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця"];
+
+        var from = 1;
+        var to = 4;
+
+        var rez = arr.slice(from, to);
+
+        document.write(rez);
+        */
+        //Splice_Example
+        /*
+        var arr = [1, 2, 3, 4, 5, 6, 7];
+
+        document.write("<p>Було: " + arr);
+
+        var rr = arr.splice(1, 3);
+
+        document.write("<p>Видалені: " + rr);
+        document.write("<p>Залишилось: " + arr);
+
+        arr.splice(1, 0,2, 3, 4);
+
+        document.write("<p>З добавленими: " + arr);
+        */
+        //Splice_Example2
+        /*
+        var Students = ["Вася","Anton","Orest","Oleg", "Roman", "Petro"];
+        
+        var from = prompt("Введіть індекс студента з якого почати вибірку");
+        var count = prompt("Ведіть кількість студентів які будуть вибрані");
+        
+        var res = Students.splice(from, count);
+        
+        document.write(res.join("<br/>"));
+        */
+        //Sort
+        /*
+        var a = [1, 2, 33, 41, 52, 192, 183, 3, 5];
+
+        a.sort();
+
+        document.write(a.join("<p>") + "<hr/>");
+
+        var b = ["a", "a", "c", "d", "q","r"];
+        
+        document.write(b.join("<p/>"));
+        */
+        //Push
+        /*
+        var a = ["January", "February", "March"];
+
+        document.write("<p>Початковий: " + a.join(", "));
+        document.write("<p>Розмір масиву: " + a.length);
+        
+        document.write("<hr/>");
+        
+        var b = a.push("April");
+        
+        document.write("<p>З доданим: " + a.join(", "));
+        document.write("<p>Розмір масиву: " +  a.length);
+        
+        document.write("<hr/>");
+
+        b = a.push("May", "June");
+        
+        document.write("<p>З доданим: " + a.join(", "));
+        document.write("<p>Розмір масиву: " +  a.length);
+        */
+        //Pop
+        /*
+        var a = ["January", "February", "March", "May", "April"];
+        
+        document.write("<p> До застосування методу Pop : " + a.join(" "));
+        document.write("<p> Довжина масиву : " + a.length);
+        
+        var lenght = a.pop();
+        
+        document.write("<p> Після застосування методу Pop : " + a.join(" "));
+        document.write("<p> Довжина масиву : " + a.length);
+        */
+        //Shift 
+        /*
+        var arr = [1, 2, 3, 4, 5];
+
+        document.write("<p> Початковий масив: " + arr.join(" "));
+        document.write("<hr/>")
+
+        var value = arr.shift();
+        
+        document.write("<p>Після застосування методу Shift: " + arr.join(" "));
+        document.write("<p>Вирізаний об’єкт: " + value);
+        */
+
+        //Unshift
+        /*
+        var ar = [1, 2, 3];
+
+        document.write("До застосування методу Unshift:  " + ar.join(" "));
+        document.write("<hr/>");
+        
+                       
+        ar.unshift("buka","kaka");
+        document.write("Після застосування методу Unshift: " + ar.join(" ")); 
+        */
+    </script>
+</body>
+
+</html>

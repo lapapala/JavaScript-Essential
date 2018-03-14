@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//Simples
+    //Func_1
+        /*
+        function myFirtsFunc() {
+            document.write("<p>Hello!!");
+            document.write("<p>How are you?");
+            document.write("<p>Goodbye!!");
+        }
+
+        function mySecondFunc() {
+
+            document.write("<p>Hello from my second func!!");
+
+        }
+
+        myFirtsFunc();
+        document.write("<hr/>");
+
+        myFirtsFunc();
+        document.write("<hr/>");
+
+        myFirtsFunc();
+
+        document.write("<hr/>");
+
+        mySecondFunc();
+        */
+    //Func_2
+        /*
+        var name;
+        var surmame;
+        var age;
+        
+        function ask() {
+            name = prompt("Введіть своє ім’я");
+            sname = prompt("Введіть прізвище");
+            age = prompt ("Введіть свій вік");
+        }
+        
+        function say() {
+            document.write("<p>" + name);
+            document.write("<p>" + sname);
+            document.write("<p>" + age);
+            document.write("<hr/>);
+        }
+        
+        ask();
+        say();
+        */
+
+    //Funcfu_3
+        /*
+        var name;
+        var surmame;
+        var age;
+
+        function ask() {
+            name = prompt("Введіть своє ім’я");
+            sname = prompt("Введіть прізвище");
+            age = prompt("Введіть свій вік");
+        }
+
+        function say() {
+            document.write("<p>" + name);
+            document.write("<p>" + sname);
+            document.write("<p>" + age);
+            document.write("<hr/>");
+            }
+
+            do {
+                ask();
+                say();
+                repeater = confirm("Повторювати запис?");
+            } while (repeater);
+            */
+    //Func_argument
+        /*
+        var a = 10;
+        var b = 15;
+        var c = 20;
+        var d = 25;
+
+        function Sum1() {
+            var result = a + b;
+            document.write("<p>Результат sum1 = "  + result);
+        }
+
+        function Sum2(x1, x2) {
+            var result = x1 + x2;
+            document.write("<p>Результат Sum2 = "+ result);
+        }
+
+        Sum1();
+
+        Sum2();
+
+        Sum2(20, 15);
+        */
+     //Optional Argument
+        /*
+        function print(msg, count) {
+            
+            if (count == undefined) {
+                count = 3;
+            }
+
+            for (var i = 0; i < count; i++) {
+                document.write("<p>" + msg);
+            }
+            document.write("<hr/>");
+        }
+
+        print("Hello");
+        print("its me ", 10);
+        */
+    //Return
+        /*
+        function Sum(a, b) {
+            return a * b ;
+            alert("Віі");
+        }
+
+        var res = Sum(10, 5);
+
+        document.write(res);
+        */
+    //Return_example
+        /*
+        function add(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function mul(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        var operand1 = prompt("Введіть перше число");
+        var sign = prompt("Введіть знак арифметичної операції +,-,/,*");
+        var operand2 = prompt("Введіть друге число");
+        var result;
+
+        operand1 = parseInt(operand1);
+        operand2 = parseInt(operand2);
+
+        switch (sign) {
+            case "+":
+                result = add(operand1, operand2);
+                break;
+            case "-":
+                result = sub(operand1, operand2);
+                break;
+            case "*":
+                result = mul(operand1, operand2);
+                break;
+            case "/":
+                result = div(operand1, operand2);
+                break;
+            default:
+                document.write("Цей знак не є одним з арифметичних операцій!!!!");
+        }
+
+        if (result != undefined) { 
+        document.write(operand1 + sign + operand2 + "=" + result);
+        }
+        */
+    //Func_argument
+        /*
+        function max(a, b, c) {
+
+            var maxValue = Number.NEGATIVE_INFINITY;
+            document.write("<p>Number.NEGATIVE_INFINITY = " + maxValue + "<hr/>");
+
+            for (var i = 0; i < arguments.length; i++)
+                
+                if (arguments[i] > maxValue)
+                    maxValue = arguments[i];
+            
+            return maxValue;
+        }
+        var res = max(124, -15, -1238, 1293, 1233,3, 99332);
+        
+        document.write("Максимальне значення = " + res);
+        */
+    //Argument_lenght
+        /*
+        function f(x, y, z) {
+            
+            if (arguments.length != 3) {
+                document.write("<p><b style = 'color: red;'>EROR:<b/> <em>Потрібно три агрумента при виклику. Введено " + arguments.length + " параметра" );
+            } else {
+                
+                document.write("<p><span style = 'color: green;'>Правельний виклик функції.<span/> Аргумети: " );
+                
+                for(var i = 0; i < arguments.length; i++){
+                    document.write(arguments[i] + ", ");
+                }
+            }
+        }
+        
+        f(1, 2);
+        f(1, 2, 3);
+        f(1, 2, 3, 4);
+        */
+
+ //Scope
+    //Variables
+        /*
+        var a;
+        var b = 888;
+        var c = b;
+        var d = null;
+        
+        document.write("<p>e = " + e);
+
+        document.write("<p>a = " + a);
+        document.write("<p>b = " + b);
+        document.write("<p>c = " + c);
+        document.write("<p>d = " + d);
+        */
+    //Local_Global var1 
+        /*
+        var global = "Глобальна змінна";
+
+        function func() {
+            var local = "Локальна змінна";
+
+            document.write("<p style = 'color: navy'>" + local);
+            document.write("<p style = 'color: navy'>" + global + "<hr/>");
+
+        }
+        
+        func();
+        
+            document.write("<p style = 'color: green'>" + global);
+            document.write("<p style = 'color: green'>" + local);
+            */
+
+    //Local_Global var2
+        /*
+        var global = "Глобальна змінна";
+        var local = "Глобальна змінна local";
+        
+        function func () {
+            var local = "Локальна змінан в функції"
+            
+            document.write("<p style = 'color: green'>" + global);
+            document.write("<p style = 'color: green'>" + local);
+        }
+        
+        func();
+        
+            document.write("<p style = 'color: grey'>" + global);
+            document.write("<p style = 'color: grey'>" + local);
+        */
+    //No_var
+        /*
+        var global = "Глобальна функція";
+
+        function f() {
+            var global = "Глобальна функція";
+            document.write("<p style = 'color:black'>" + global + "<hr/>");
+        }
+
+
+        document.write("<p style = 'color:green'>" + global + "<hr/>");
+
+        f();
+
+        document.write("<p style = 'color:red'>" + global);
+        */
+    //In_var
+        /*
+        function A() {
+            
+            var a = " Локальна змінна - а";
+            
+            document.write("<p>" + a );
+            
+            document.write("<p>" + b );
+
+        }
+        function B() {
+            
+            var b = " Локальна змінна - b";
+            
+            document.write("<p>" + b );
+            
+        }
+        
+        A();
+        B();
+        */
+
+     //Constract 
+        /*
+        for (var counter = 0; counter < 3; counter++) { 
+        document.write("<p style = 'background-color:blue'>" + counter);
+        }
+        
+        document.write("<p style = 'background-color:red'>" + counter);
+        */
+        
+        
+        /*function f() {
+            
+            var a = 1,
+            counter = 0;// ?
+
+            alert(a);
+
+            for (counter = 0; counter <= 3; counter++) {
+                document.write("<p style = 'background-color:lightblue'>" + counter);
+            }
+
+            document.write("<p style = 'background-color:yellow'>" + counter);
+            
+
+        }
+
+        
+        f();
+        */
+
+//Function_different
+
+    //Recursion????????????
+
+        /*function f(counter) {
+            
+            counter--;
+            
+            document.write("<p style = 'background-color:yellow'>Перша частина методу " + counter);  
+            
+            if (counter != 0)
+                f(counter);
+            
+            document.write("<p style = 'background-color:yellow'>Друга частина методу " + counter);  
+
+        }
+        
+        
+        f(3);*/
+
+    //Factorial
+        /* var input = prompt("Введіть число");
+         
+         input = parseInt(input);
+         
+         function factorial(x) {
+             
+             if (x <= 1) 
+                 return 1;
+                 
+                 return x * factorial(x - 1);
+             }
+             
+             document.write("Факторіал числа " + input + "! =" + factorial(input));
+         */
+
+    //Func_literal
+
+        /*var f = function () {
+            document.write("<p>Hello world");
+        }
+        
+        f();
+        
+        f = function () {
+            document.write("<p>See you soon");
+        }
+        
+        f();
+        */
+
+    //Func_in_func
+
+        /*  function outer () {
+              
+              
+              inner();
+              
+              function inner () {
+                  document.write("<p style = 'background-color:yellow'>Inner_func ");
+              }
+              inner();
+              
+          }
+          outer();
+          */
+    //Func_in_func
+
+        /*var a = prompt("Введіть довжину першого катета");
+        var b = prompt("Введіть довжину другого катета");
+        
+        a = parseInt(a);
+        b = parseInt(b);
+        
+        function hypotenuse(a, b) {
+            
+            
+            function pow(x) {
+                return x * x;
+            };
+            
+            return Math.sqrt(pow(a) + pow(b));
+        }
+        
+        document.write("Гіпотенуза з катетами " + a + " і " + b + " = " + hypotenuse(a, b));
+        
+        */
+    //Func_as_argument
+
+        
+        /*function greeting(name) {
+            alert('Hello ' + name);
+        }
+
+        function processUserInput(callback) {
+            var name = prompt('Please enter your name.');
+            callback(name);
+        }
+
+        processUserInput(greeting);*/
+
+    </script>
+</body>
+
+</html>
